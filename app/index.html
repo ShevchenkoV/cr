@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="myApp" style="height: 100%;">
 <head>
   <meta charset="utf-8">
 
@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="css/app.css"/>
 </head>
-<body>
+<body style="height: 100%;">
 
-  <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
+  <nav style="height: 5%;" class="navbar navbar-default navbar-fixed-top " role="navigation">
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -42,9 +42,9 @@
       </div><!-- /.container -->
   </nav>
 
-  <div class="container">
-  <div class="row clearfix">
-  <div class = "splitHelper"></div>
+  <div style="height: 100%;" class="container">
+  <div style="height: 100%;"  class="row clearfix">
+      <div class = "splitHelper"></div>
       <div class="col-md-2"><!-- Left-frame -->
           <div class="row clearfix">
               <div class="col-md-12 ">
@@ -52,10 +52,12 @@
               </div>
           </div>
       </div> <!-- ./Left-end -->
-      <div class="col-md-10"  > <!--Center-frame -->
-          <div class="well" style="height:600px; overflow: auto;" ng-view></div>
+      <div  style="height: 70%;" class="col-md-10"  > <!--Center-frame -->
+          <div style="height: 100%; overflow:auto;" class="well"  ng-view></div>
+      </div>   <!--Center-frame -->
 
-          <div class="well" style="height:200px; overflow:auto;">   <!--bottom part-->
+      <div style="height: 15%;"class="container">
+          <div style="height: 100%; overflow:auto;" class="well col-md-10 col-md-offset-2">   <!--bottom part-->
               <tabs>
                   <pane title="Order entry">
                       <div ng-include src=" 'js/modules/order-entry-tool/order-entry-tool.tpl.html' "></div>
@@ -70,7 +72,7 @@
                   </pane>
               </tabs>
           </div> <!-- ./bottom part-->
-      </div>   <!--Center-frame -->
+      </div>
   </div>
   </div>
 
