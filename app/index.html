@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+
+              <a class="navbar-brand" href="#/home">Crypterra</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li><a href="#/positions">Positions</a></li>
+                  <li><a href="#/trade">Trade history</a></li>
+                  <li><a href="#/balances">Balances</a></li>
+                  <li class="dropdown">
+                      <a href="" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#/faq">FAQ</a></li>
+                          <li><a href="#/ticket">Submit a ticket</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a href="" class="dropdown-toggle" data-toggle="dropdown">Account settings <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Log out</a></li>
+                          <li><a href="#/account">Account settings</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+  </nav>
+
+  <div class="container">
+  <div class="row clearfix">
+  <div class = "splitHelper"></div>
+      <div class="col-md-2"><!-- Left-frame -->
+          <div class="row clearfix">
+              <div class="col-md-12 ">
+                <div ng-include src=" 'partials/balances/balances-short.tpl.html' "></div>
+              </div>
+          </div>
+      </div> <!-- ./Left-end -->
+      <div class="col-md-10"  > <!--Center-frame -->
+          <div class="well" style="height:600px; overflow: auto;" ng-view></div>
+
+          <div class="well" style="height:200px; overflow:auto;">   <!--bottom part-->
+              <tabs>
+                  <pane title="Order entry">
+                      <div ng-include src=" 'partials/order-entry-tool/order-entry-tool.tpl.html' "></div>
+                  </pane>
+                  <pane title="Open Orders">
+                      <p>
+                      <div ng-include src=" 'partials/orders/orders.tpl.html' "></div>
+                      </p>
+                  </pane>
+                  <pane title="Positions-short">
+                      <div ng-include src=" 'partials/positions/positions-short.tpl.html' "></div>
+                  </pane>
+              </tabs>
+          </div> <!-- ./bottom part-->
+      </div>   <!--Center-frame -->
+
+  </div>
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  <!-- Partial scripts -->
+  <script src="partials/account/account.js"></script>
+  <script src="partials/about/about.js"></script>
+  <script src="partials/balances/balances.js"></script>
+  <script src="partials/balances/balances-short.js"></script>
+  <script src="partials/faq/faq.js"></script>
+  <script src="partials/home/home.js"></script>
+  <script src="partials/positions/positions.js"></script>
+  <script src="partials/positions/positions-short.js"></script>
+  <script src="partials/trade/trade.js"></script>
+  <script src="partials/ticket/ticket.js"></script>
+  <script src="partials/order-entry-tool/order-entry-tool.js"></script>
+  <script src="partials/orders/orders.js"></script>
+
+</body>
+</html>
