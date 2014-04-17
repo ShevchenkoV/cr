@@ -13,7 +13,7 @@ angular.module('myApp', [
   'myApp.balances-short',
   'myApp.faq',
   'myApp.home',
-  'myApp.trade',
+  'myApp.history',
   'myApp.ticket',
   'myApp.order-entry-tool',
   'myApp.orders',
@@ -27,7 +27,7 @@ config(['$routeProvider', function($routeProvider) {
       .when('/balances', {templateUrl: 'js/modules/balances/balances.tpl.html', controller: 'BalancesCtrl'})
       .when('/faq', {templateUrl: 'js/modules/faq/faq.tpl.html', controller: 'FaqCtrl'})
       .when('/home', {templateUrl: 'js/modules/home/home.tpl.html', controller: 'HomeCtrl'})
-      .when('/trade', {templateUrl: 'js/modules/trade/trade.tpl.html', controller: 'TradeCtrl'})
+      .when('/history', {templateUrl: 'js/modules/history/history.tpl.html', controller: 'HistoryCtrl'})
       .when('/ticket',{templateUrl:'js/modules/ticket/ticket.tpl.html',conroller:'TicketCtrl'})
       .when('/positions',{templateUrl:'js/modules/positions/positions.tpl.html',conroller:'PositionsCtrl'})
   .otherwise({redirectTo: '/home'});
