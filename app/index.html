@@ -43,36 +43,50 @@
   </nav>
 
   <div style="height: 100%;" class="container">
-  <div style="height: 100%;"  class="row clearfix">
-      <div class = "splitHelper"></div>
-      <div class="col-md-2"><!-- Left-frame -->
-          <div class="row clearfix">
-              <div class="col-md-12 ">
-                <div ng-include src=" 'js/modules/balances/balances-short.tpl.html' "></div>
+      <div style="height: 100%;"  class="row clearfix">
+          <div class = "splitHelper"></div>
+          <div class="col-md-2"><!-- Left-frame -->
+              <div class="row clearfix">
+                  <div class="col-md-12 ">
+                    <div ng-include src=" 'js/modules/balances/balances-short.tpl.html' "></div>
+                  </div>
               </div>
-          </div>
-      </div> <!-- ./Left-end -->
-      <div  style="height: 80%;" class="col-md-10"  > <!--Center-frame -->
-          <div style="height: 80%; overflow:auto; " class="well"  ng-view></div>
+          </div> <!-- ./Left-end -->
+          <div  style="height: 85%;" class="col-md-10"  > <!--Center-frame -->
+              <div style="height:80%; overflow:auto; " class="well"  ng-view></div>
 
-          <div style="height: 20%;overflow:auto;" class="well">   <!--bottom part-->
-              <tabs>
-                  <pane title="Order entry">
-                      <div ng-include src=" 'js/modules/order-entry-tool/order-entry-tool.tpl.html' "></div>
-                  </pane>
-                  <pane title="Open Orders">
-                      <p>
-                      <div ng-include src=" 'js/modules/orders/orders.tpl.html' "></div>
-                      </p>
-                  </pane>
-                  <pane title="Positions-short">
-                      <div ng-include src=" 'js/modules/positions/positions-short.tpl.html' "></div>
-                  </pane>
-              </tabs>
-          </div> <!-- ./bottom part-->
-      </div>   <!--Center-frame -->
+              <div style="height: 20%;overflow:auto;" class="well">   <!--bottom part-->
+                  <tabs>
+                      <pane title="Order entry">
+                          <div ng-include src=" 'js/modules/order-entry-tool/order-entry-tool.tpl.html' "></div>
+                      </pane>
+                      <pane title="Open Orders">
+                          <p>
+                          <div ng-include src=" 'js/modules/orders/orders.tpl.html' "></div>
+                          </p>
+                      </pane>
+                      <pane title="Positions-short">
+                          <div ng-include src=" 'js/modules/positions/positions-short.tpl.html' "></div>
+                      </pane>
+                  </tabs>
+              </div> <!-- ./bottom part-->
+          </div>   <!--Center-frame -->
+      </div>
   </div>
-  </div>
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <!-- About, Contact us, Terms, API, Security, Status. Also lets add follow us on twitter button -->
+      <div class="container">
+          <ul class="nav navbar-nav">
+              <li><a href="#/about">About</a></li>
+              <li><a href="#/contact">Contact us</a></li>
+              <li><a href="#/terms">Terms</a></li>
+              <li><a href="#/api">API</a></li>
+              <li><a href="#/security">Security</a></li>
+              <li><a href="#/status">Status</a></li>
+              <li><a href="#/twitter">Twitter</a></li>
+          </ul>
+      </div>
+  </nav>
 
 
 
