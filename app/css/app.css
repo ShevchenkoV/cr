@@ -34,5 +34,12 @@
 .balances-short{
     font-size: 12px;
 }
+body{
+    padding-top:70px;
+    padding-bottom:80px;
+}
+.bottom-small{
+    height: 40px !important;
+}
 
 
